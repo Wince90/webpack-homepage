@@ -3,11 +3,226 @@
 @import "_variables";
 @import "modules/hello.scss";
 
+/*
+
+To do :
+0. Correct BEM class
+1. Equality class in all "site"
+2. create @mixin 
+3. organize code with :
+    3.1. common class in all site
+    3.2. special class in every site
+
+-----------------INFO--------------
+
+1. Use poppins font to site
+
+*/
+
+//---------------CSS FUNCTIONS--------------
+
+@mixin gradient {
+    background: linear-gradient(90deg, rgba(103,97,140,1) 0%, rgba(72,133,187,1) 100%);
+}
+
+@mixin articleTextStyle {
+    color: rgba(0, 0, 0, 0.84);
+    padding: 0 0 0 16px;
+    margin: 20px 30px;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,*:after, *:before {
+    box-sizing: inherit;
+}
+
 body {
-  background: $wtf;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+    background: $mainBackgroundColor;
+    margin-top: 5%;
+}
+
+main {
+    margin: 65px 5% 0;
+    display: grid;
+    grid-template-columns: 1fr 100px 1fr;
+    grid-template-areas: 
+    "main main main"
+    "info . calendar"
+    "content content content";
+    justify-content: center;
+    align-items: center;
+}
+
+// --------------------NAVIGATION------------------
+.navigation {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    box-sizing: border-box;
+    @include gradient();
+    z-index: 1;
+    @media (max-width: $phoneSize) {
+      padding: 0;
+    }
+    &__button {
+        position: absolute;
+        position: fixed;
+        top: 5%;
+        right: 7%;
+        z-index: 999;
+    }
+    &__link {
+        color: $navigationLinkColor;
+        text-decoration: none;
+        padding: 0 5px;
+        font-size: 20px;
+    }
+    &__list {
+        display: flex;
+        list-style: none;
+        justify-content: space-evenly;
+    }
+    @media (max-width: $phoneSize) {
+      &__item {
+        margin: 10px 0;
+      }
+    }
+}
+
+//------------TOP CONTENT-----------
+
+.topHeader {
+    grid-area: main;
+    margin: 165px 0 0;
+    &__header {
+        color: $mainHeadingColor;
+    }
+}
+
+.blog {
+    grid-area: content;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container__blog {
+    grid-area: blog;
+}
+
+.sectionHeader, .thirdHeader, .blogHeader, .programming__header {
+    color: $sectionHeadingColor;
+    padding: 0 0 0 10%;
+}
+
+.dailyHeader, .programming__title {
+    color: $articleHeadingColor;
+}
+
+
+.dailyParagraph, .programming__content, .footer__content, .programming__list{
+    @include articleTextStyle();
+}
+
+.timeData {
+    color : black;
+}
+
+.sectionBio {
+    width: 100%;
+    max-width: 700px;
+    grid-area: info;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 30px;
+    @include gradient();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imagePosition {
+    display: block;
+    margin: auto;
+}
+
+.terminator__image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.background {
+    position: relative;
+}
+
+.background__video {
+    width: 100%;
+    height: 600px;
+}
+.background__header {
+    font-size: 13em;
+    color: #fefefe;
+    position: absolute;
+    width: 100%;
+    bottom: -19%;
+    right: -14%;
+    text-align: left;
+    line-height: 0.77;
+    z-index: 232;
+    font-weight: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.shadow {
+    background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0, 0, 0, 0.473));
+    position: absolute;
+    width: 100%;
+    height: 600px;
+}
+
+.programming__header--false {
+    padding: 0;
+    color: rgb(199, 14, 14);
+}
+
+.programming__header--true {
+    padding: 0;
+    color: green;
+}
+
+/* -------------------FORM.HTML---------------- */
+.form {
+    margin:10px;
+    display: grid;
+    grid-row: 1fr 1fr 1fr;
+    grid-template-areas: ". list .";
+    &__content {
+        padding: 20px;
+        margin: 20px;
+        width: 312px;
+        background-color: lightBlue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-area: list;
+        align-self: center;
+        justify-self: center;
+      }
 }

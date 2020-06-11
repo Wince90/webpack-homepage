@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="navigation">
+        <nav <nav class="navigation__bar">
+            <ul class="navigation__list navigation__list--js">
+                <li class="navigation__item"><a class="navigation__link" href="./index.html">Strona główna</a></li>
+                <li class="navigation__item"><a class="navigation__link" href="./programowanie.html">Programowanie</a>
+                </li>
+                <li class="navigation__item"><a class="navigation__link" href="../Homepage/form.html">Formularz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="background">
+        <h1 class="background__header">
+            PRO<br>GRAMO<br>WANIE
+        </h1>
+        <div class="shadow">
+
+        <!-- </div>
+        <video class="background__video" autoplay muted poster="Http">
+            <source src="../Homepage/Video_Mountain.mp4" type="video/mp4">
+        </video>
+    </div> -->
+    <main class="main">
+        <section class="programming">
+            <article class="programming__article">
+                <header>
+                    <h2 class="programming__title">
+                        Dzień 5 - Podstawowe działanie strony, javascriptu i termianala
+                    </h2>
+                </header>
+                <h3 class="programming__header">
+                    Działanie strony
+                </h3>
+                <p class="programming__content">
+                    Dowiedziałem się jak działa ruch na stronie. w pierwszej kolejności wpisywany jest adres strony
+                    np.
+                    onet.pl. następnie przeglądarka za pomocą DNS’u tłumaczy wpisaną frazę na adres. Po znalezieniu
+                    serwera odpytuje go o index (w zależności co jest plikiem indeksu na serwerze. Następnie serwer
+                    wysyła do przeglądarki zawartość html. Po czym przeglądarka wczytuje html i szuka dodatkowych
+                    zasobów .css, .js .jpg … dla każdego z zasobów wykonuje zapytanie. Przeglądarka parsuje
+                    (dokonywanie
+                    analizy składniowej ciągu znaków w celu ustalenia jej struktury by wiki) i renderuje stronę.
+
+                    <br>Kody protokołu HTTPs
+                    <br>100 > Be patient, not ready.
+                    <br>200 > Its ok.
+                    <br>300 > Wrong place. Let i show you the way.
+                    <br>400 > 404 ^-(o_o)-^ Nothing in here.
+                    <br>500 > Ups we got a problem.
+
+                    <br>Istotną kwestią przy tworzeniu wszelkich linków lokalnie jest nie zamieszczanie ścieżki
+                    roota np
+                    : img src”img/wtf.svg” alt=”Logo WTF: Co ten front end” - ścieżka względna
+
+                    <br>Jeżeli już umieszczamy projekt na serwerze, należy dodawać ścieżkę roota np. img src” style
+                    color: red;>/img/wtf.svg” alt=”Logo WTF: Co ten front end”/> - ścieżka bezwzględna.
+
+                    <br>Różnica pojawia się wtedy gdy pojawiają się jakiekolwiek podstrony na serwerze.
+                </p>
+                <h3 class="programming__header">
+                    JavaScript
+                </h3>
+                <p class="programming__content">
+                    script src=”nazwa.js” dodawać na koniec dokumentu
+
+                    <br>const - rzeczy mające stałą strukturę - nie można ich podmieniać.
+
+                    <br>const name = ‘Bartek’;
+                    const age = 29;
+
+                    let - rzeczy, które mozemy przypisywac wielokrotnie, ale definiujemy tylko raz
+
+                    let isHappy = false;
+                    isHappy = true;
+                    isHappy =’tak’;
+
+                    Muszę odzwyczaić się od starego typu łączenia w kodzie tekstu i zmiennych na nowy sposób tak jak
+                    :
+
+                    console.log(`${name} ${age}`);
+
+                    console.log(`Nazywam się ${name} i mam ${age} lat`);
+                </p>
+                <h3 class="programming__header">
+                    Terminal
+                </h3>
+                <p class="programming__content">
+                    Podstawowe komendy dotyczące poruszanie się w terminalu w systemie Windows.
+
+                    cd nazwa-katalogu - przejście do katalogu o podanej nazwie + Tab - automatyczne znajdywanie
+                    istniejącej ścieżki po wpisaniu pierwszych liter.
+
+                    cd .. - przejście o jedną pozycję wyżej, cd ..\.. - 2 pozycje.
+
+                    code . - uruchomienie w danej ścieżce vcs.
+
+                    dir - wypisanie zawartości katalogu.
+
+                    mkdir nazwa-katalogu - stworzenie katalogu o podanej nazwie.
+
+                </p>
+            </article>
+            <article class="programming__article">
+                <header>
+                    <h2 class="programming__title">
+                        Dzień 6 - Zadania Domowe WTF Tyzdień trzeci.
+                    </h2>
+                </header>
+                <h3 class="programming__header">
+                    Zadania domowe
+                </h3>
+                <p class="programming__content">
+                    Dziś zrobiłem zadania domowe z tygodnia trzeciego kursu WTF - co ten front end. Nie robiąc
+                    przedłużania
+                    wypiszę same zmiany jakie wprowadziłem do projektu bloga.
+                    <ol class="programming__list">
+                        <li>Tworzenie nowych podstron dla każdej sekcji w moim blogu.</li>
+                        <li>Dodanie zdjęcia.</li>
+                        <li>Stworzenie nawigacji między plikami ( od razu używać pełnej ścieżki
+                            ../nazwa_katalogu/przykład.html niż bezpośredniej).</li>
+                        <li>Zastosowanie validatora do sprawdzenia poprawności kodu.</li>
+                        <li>Uzupełnienie o klasy i odniesienia w stylach.</li>
+                        <li>Nadanie nagłówkom stylów za pomocą klas.</li>
+                        <li>Stosowanie odpowiedniego nazewnictwa.</li>
+                    </ol>
+                </p>
+            </article>
+            <article class="programming__article">
+                <header>
+                    <h2 class="programming__title">
+                        Dzień 7 - Jest Git ;)
+                    </h2>
+                </header>
+                <h3 class="programming__header">
+                    GIT
+                </h3>
+                <p class="programming__content">
+                    Nauczyłem się podstawowych koment i pracy z repozytorium.
+                    <ul class="programming__list"> Podstawowe:
+                        <li>Komenda do nadania imienia i nazwiska:
+                            <br>git config --global user.name “Imie Nazwisko”
+                        </li>
+                        <li>nadanie e maila:
+                            <br>git config --global user.email “email@email.com”</li>
+                        <li>Informacja zwrotna imię nazwisko :
+                            <br>git config --get user.name
+                        </li>
+                        <li>analogicznie e mail :
+                            <br>git config --get user.email
+                        </li>
+                    </ul>
+                    <ul class="programming__list"> Projekt:
+                        <li>git init (dodaje nowy plik git do śledzenia)</li>
+                        <li>git status (sprawdza aktualny status plików ;P</li>
+                        <li>git add . (dodaje wszystkie pliki do aktualizacji bez kropki pojedynczy plik)</li>
+                        <li>git commit -m “nazwa zmian” (dodaj komentarz do zmian)</li>
+                        <li>gitk (status wszystkich komentarzy)</li>
+                    </ul>
+                    Flow działania: git add . / git commit -m “opis zmian” / git push
+                </p>
+            </article>
+            <article class="programming__article">
+                <header>
+                    <h2 class="programming__title">
+                        Dzień 8 Box model
+                    </h2>
+                </header>
+                <h3 class="programming__header">
+                    Część I
+                </h3>
+                <p class="programming__content">
+                    Dziś zgłębiłam tajniki “Snake mode on” pdk ;)
+                    display : block; - element wyświetla się na całą szerokość rodzica.
+                    <br>przykład_______________________________________________________
+
+                    <br>display : inline; - element zajmuję tylko potrzebne miejsce np.“tutaj”. W całym tekście.
+
+                    <br>Wysokości i szerokości ( width and height) działają przy użyciu display : block i display :
+                    inline-block.
+
+                    <br>Prostą wersją responsywności strony jest połaczenie 2 wartości.
+                    width : 100px; - ustawia na “twardo” wartość szerokości.
+
+                    <br>width : 100%; + max-width : 700 px - ustala szerokość na 700 px ale po zmniejszeniu szerokości
+                    “zawija” zawartość (taka podstawa responsywności).
+
+                    <br>Wartości :
+                    vw - szerokość w procentach ale bez dziedziczenia względem rodzica . dostosowuje się do wymiarów
+                    strony
+                    automatycznie.
+                    np width : 50vw;
+                </p>
+                <h3 class="programming__header">
+                    Część II
+                </h3>
+                <p class="programming__content">
+                    <br>div - nie ma znaczenia semantycznego. Używany jest w momencie braku odpowiedniego znacznika.
+
+                    <br>box-sizing :
+                    content-box - powierzchnia na zawartość się nie zmniejsza, każde dodanie zwiększa wielkość całego
+                    elementu (pudełka).
+
+                    <br>border-box - zmienia się powierzchnia na zawartość, ale zostają wymiary wcześniej określone.
+
+                    <br>position:
+
+                    relative - Tak pozycjonowany element staje się kontenerem dla wszystkich innych, które są absolutnie
+                    w
+                    nim pozycjonowane.
+                </p>
+                <!-- <img class="imagePosition" src="../Homepage/image/position.jpg"
+                    alt="Obrazowy przykład zamieszczania position"> -->
+            </article>
+            <article class="programming__article">
+                <header>
+                    <h2 class="programming__title">
+                        Dzień 9 - BEM i DOM
+                    </h2>
+                </header>
+                <h3 class="programming__header">
+                    BEM
+                </h3>
+                <p class="programming__content">
+                    Dziś poznałem bardzo przydatną rzecz jaką jest stosowanie Block Element Modifier (ogólnej
+                    organizacji w kodzie, żeby się nie pogubić przy wypisywaniu klas). Mam pomysł żeby każdy element
+                    graficzny jaki stworzę np w figmie opisać i nazwać obrazkowo tak jak to zrobione było na
+                    slajdzie w 5:29 ;). Pozwoli mi to w przyjemny sposób stworzyć cały szablon html ze stylami
+                    łatwymi do określania.
+
+                    <br>B - Nadrzędny element blok np dłoń.
+                    <br>E - Element - część bloku (nie musi być bezpośrednim dzieckiem,ale coś co jest zawarte w dłoni).
+                    <br>M - Modyfikator- jeśli element występuje w innych wariancjach np kolor rozmiar. Tworzymy
+                    dodatkową klasę.
+
+                    <br>block__element--modifier
+
+                </p>
+                <h3 class="programming__header">
+                    DOM Document Object Mode
+                </h3>
+                <p class="programming__content">
+                    const about = document.querySelector(‘.about); - przypisujemy do zmiennej pobranie całej klasy
+                    .about i ją wyświetlamy console.log(about);
+
+                    const paragraphs = document.querySelectorAll(‘p’); - przypisanie do zmiennej wszytkich paragrafów i
+                    wypisanie ich przy wywołaniju w formie tablicy (NodeList). console.log(paragraphs);
+
+                    console.log(paragraphs[numer_tablicy]; - wywołanie właściwego paragrafu
+
+                    Jeżeli robimy cos przez document.querySelector to w BEM’ie najlepiej dodać nową klasę do JS’a
+
+                    console.log(about.innerHTML); - zwraca zawartość treści .about.
+
+
+                    about.innerHTML = `Pozdro JS` - nadpisuje kodem JS widoczną zawartość na stronie HTML (można używać
+                    wszystkich literałów).
+                </p>
+            </article>
+            <article class="programming__article">
+                <header>
+                    <h2 class="programming__title">
+                        Dzień 10 - Logika w JS
+                    </h2>
+                </header>
+                <h3 class="programming__header">
+                    Operatory porównania
+                </h3>
+                <p class="programming__content">
+                    <br> `!=` -> operator porównania lewa strona nie równa się prawej.
+                    <br> `>` lewa strona większa od prawej.
+                    <br> `<` lewa strona mniejsza od prawej. <br> `>=` lewa strona większa / równa od prawej.
+                        <br> `<=` lewa strona mniejsza / równa od prawej. <br> `==` obie strony równe.
+                            <br> `===` obie strony równe (sprawdza typeof).
+                            <br> `!=` obie strony różne.
+                            <br> `!==` obie strony równe(sprawdza typeof).
+                </p>
+                <h3 class="programming__header">
+                    Wartości <span class="programming__header programming__header--false">False</span>:
+                </h3>
+                <p class="programming__content">
+                    <br>false
+                    <br>0
+                    <br>“,””,`` - pusty string
+                    <br>null
+                    <br>undefined
+                    <br>NaN - not a number
+                </p>
+                <h3 class="programming__header">
+                    Wartości <span class="programming__header programming__header--true">True</span>:
+                </h3>
+                <p class="programming__content">
+                    <br>‘Tekst’
+                    <br>12
+                    <br>-4
+                    <br>{}
+                    <br>[]
+                    <br>true
+                    <br>itd.
+                </p>
+                <h3 class="programming__header">
+                    Logika
+                </h3>
+                <p class="programming__content">
+                    <br>&& - AND - obie strony muszą być true.
+
+                    <br>if((myVariable == 4) && (otherLetOrConst ! ==’test’)) {...}
+
+                    <br>|| - OR - jedna ze stron musi być true.
+
+                    <br>if((myVariable == 4) || (otherLetOrConst ! ==’test’)) {...}
+
+                    <br>! NOT - odwraca wartość wyrażenia logicznego
+
+                    <br>if(!(‘JavaScript’ === ‘Java’)) { // ten kod się wykona (zwróci wartość true poprzez ! odwrócenie
+                    pierwotnej wartości false ‘JavaScript’ === ‘Java’) }
+                </p>
+                <h3 class="programming__header">
+                    Switch
+                </h3>
+                <p class="programming__content">
+                    <br>let age = 30;
+                    <br>switch (age) {
+                    <br>case 20:
+                    <br> console.log(‘masz równo 20 lat’);
+                    <br> break;
+                    <br> default:
+                    <br> console.log(‘masz ${age} lat’);
+                    <br> break;
+                    <br>};
+                </p>
+                <h3 class="programming__header">
+                    Zapis skrócony “ifa” :
+                </h3>
+                <p class="programming__content">
+                    <br>(zmienna1 > zmienna2) ? console.cog(‘true’) : console.log(‘false’);
+
+                    <br>const stała = (let > 70) ? ‘yes’ : ‘no’;
+                    <br>console.log(stała);
+                </p>
+            </article>
+            <article class="programming__article">
+                <header>
+                    <h2 class="programming__title">
+                        Dzień 11 - Funckcje JS i trochę HTML'a
+                    </h2>
+                </header>
+                <h3 class="programming__header">
+                    Funkcja w JS
+                </h3>
+                <p class="programming__content">
+                    Deklarujemy nazwę funkcji (ale nie zawsze) np function calc(x) {...}
+                    <br>W środku dokonujemy obliczeń / wykonujemy zadania
+
+                    <br>function calc(x) {
+                    <br>x = x + 1;
+                    <br>return x;
+                    <br>}
+
+                    <br>Funkcja przyjmuje argumenty (nie zawsze: function calc() {...})
+                    <br>Funkcja zawsze zwraca coś (nawet jeśli nie mamy return - wtedy funkcja zwraca undefined)
+                </p>
+                <h3 class="programming__header">
+                    (Fat) arrow function
+                </h3>
+                <p class="programming__content">
+                    const calculate = x => (x+1)*3;
+
+                    <br>wywołanie calculate(2); // wynik to 9.
+                </p>
+                <h3 class="programming__header">
+                    Listy
+                </h3>
+                <p class="programming__content">
+                    Zagnieżdżanie list :
+
+                    <br>ul
+                    <br>li pozycja 1 /li
+                    <br>li pozycja 2
+                    <br>ol
+                    <br>li zagnieżdżona pozycja 1 /li
+                    <br>li zagnieżdżona pozycja 1 /li
+                    <br>/ol
+                    <br>/li
+                    <br>li pozycja 3 /li
+                    <br>/ul
+                </p>
+                <h3 class="programming__header">
+                    Nawigacja
+                </h3>
+                <p class="programming__content">
+                    Nav - nawigacja na stronie która powinna być zawarta w tym właśnie znaczniku.
+
+                    <br>nav
+                    <br>ul
+                    <br>li
+                    <br>a href=”#” link1 /a
+                    <br>/li
+                    <br>li
+                    <br>a href=”#” link2 /a
+                    <br>/li
+                    <br>/ul
+                    <br>/nav
+                </p>
+                <h3 class="programming__header">
+                    Description
+                </h3>
+                <p class="programming__content">
+                    Description list - dl
+                    <br>Description term - dt
+                    <br>Description details - dd
+
+                    <br>Używane do wypisywania listy definicji/wskazówek np.
+
+                    <br>h2 Zioła na uspokojenie /h2
+                    <br>dl
+                    <br>dt chmiel zwyczajny /dt
+                    <br>dd
+                    <br>Chmiel zwyczajny (Humulus lupulus) w lecznictwie ludowym wykorzystywano go głównie jako surowiec
+                    wspomagający apetyt oraz moczopędny. Wyciągi z chmielu stosuje się także do celów wyciszających i
+                    uspokajających.
+                    <br>/dd
+
+                    <br>dt Lawenda /dt
+                    <br>dd
+                    <br>Lawenda lekarska (Lavandula officinalis) jako roślina lecznicza znana jest od stuleci. Uprawia
+                    się ją powszechnie w wielu krajach świata, również w Polsce. Pochodzi z rejonu Morza Śródziemnego.
+                    Ziele lawendy charakteryzuje się przyjemnym zapachem, natomiast w smaku jest gorzkie i szczypiące.
+                    <br>/dd
+                    <br>/dl
+                </p>
+            </article>
+        </section>
+    </main>
+    <footer class="footer1">
+        <p class="footer__content">Strona stworzona przez Bartka Świdra co postanowił dokończyć kus "WTF-co ten
+            front
+            end" autorstwa Macieja
+            Korsana.</p>
+    </footer>
+    </script>
+</body>
+
+</html>

@@ -21,6 +21,12 @@ To do :
 
 //---------------CSS FUNCTIONS--------------
 
+:root {
+    --changeTheme-background-color: #fefefe;
+    --button-background-color: gray;
+    --button-color: white;
+}
+
 @mixin gradient {
     background: linear-gradient(90deg, rgba(103, 97, 140, 1) 0%, rgba(72, 133, 187, 1) 100%);
 }
@@ -42,7 +48,7 @@ html {
 }
 
 body {
-    background: $mainBackgroundColor;
+    background: var(--changeTheme-background-color);
     margin-top: 5%;
 }
 
@@ -97,20 +103,34 @@ main {
         list-style: none;
         justify-content: space-evenly;
 
-    @media (max-width: $phoneSize) {
-        flex-direction: column;
-        display: none;
-    }
+        @media (max-width: $phoneSize) {
+            flex-direction: column;
+            display: none;
+        }
     }
 
-    &__item {}
-
-    @media (max-width: $phoneSize) {
-        margin: 10px 0;
+    &__item {
+        @media (max-width: $phoneSize) {
+            margin: 10px 0;
+        }
     }
 }
 
 //------------TOP CONTENT-----------
+
+.changeTheme__button {
+    background: var(--button-background-color);
+    border: none;
+    border-radius: 20px;
+    color: var(--button-color);
+    height: 30px;
+    margin: 20px 5px;
+    width: 70px;
+}
+.changeTheme__button:hover {
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+  }
 
 .topHeader {
     grid-area: main;

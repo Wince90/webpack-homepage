@@ -26,7 +26,34 @@ navButton.addEventListener('click', (e) => {
 });
 
 
-//moment script//
+//moment script of actual time//
 let acualTime = moment();
 
 document.querySelector('.topHeader__timer-js').innerHTML = moment();
+
+//Change theme script//
+
+let isDark = false;
+let button = document.querySelector('.changeTheme__button--js');
+
+const switchThemeOfSite = () =>
+{
+  if(isDark) {
+    isDark = false;
+    console.log('hello');
+    document.documentElement.style.setProperty('--changeTheme-background-color', '#fefefe')
+    document.documentElement.style.setProperty('--button-background-color', 'gray')
+    document.documentElement.style.setProperty('--button-color', 'white')
+    button.innerHTML = "Dark"
+  } else {
+    isDark = true;
+    console.log('Jest true')
+    document.documentElement.style.setProperty('--changeTheme-background-color', 'gray')
+    document.documentElement.style.setProperty('--button-background-color', 'white')
+    document.documentElement.style.setProperty('--button-color', 'black')
+    button.innerHTML = "White";
+  }
+}
+
+
+button.addEventListener('click', switchThemeOfSite);

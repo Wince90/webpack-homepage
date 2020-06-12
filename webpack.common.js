@@ -60,7 +60,7 @@ module.exports = {
       template: "./src/pages/programowanie.html",
       inject: true,
       chunks: ["index"],
-      filename: "another.html",
+      filename: "programowanie.html",
     }),
   ],
 };

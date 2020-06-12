@@ -1,5 +1,5 @@
 import '../scss/main.scss';
-
+import moment from 'moment';
 /* place your code below */
 
 
@@ -24,3 +24,9 @@ navButton.addEventListener('click', (e) => {
     console.log(navigationList);
     navigationList.classList.toggle('navigation__list--visible');
 });
+
+
+//moment script//
+let acualTime = moment();
+
+document.querySelector('.topHeader__timer-js').innerHTML = moment();

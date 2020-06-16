@@ -62,5 +62,11 @@ module.exports = {
       chunks: ["index"],
       filename: "programowanie.html",
     }),
+    new HtmlWebpackPlugin({
+      template: "./src/pages/form.html",
+      inject: true,
+      chunks: ["index"],
+      filename: "form.html",
+    }),
   ],
 };

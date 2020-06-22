@@ -1,0 +1,12 @@
+.storageSaver {
+    display: flex;
+    height: 100vh; 
+    align-items: center;
+    justify-content: center;
+    &__description {
+        border: dotted 1px black;
+        height: 300px;
+        width: 200px;
+        text-align: center;
+    }
+}

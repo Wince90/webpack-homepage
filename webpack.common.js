@@ -5,6 +5,7 @@ module.exports = {
   /* here you can define another js file */
   entry: {
     index: "./src/js/index.js",
+    formScript: "./src/js/formScript.js",
   },
   output: {
     filename: "[name].[hash:8].js",
@@ -65,7 +66,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/pages/form.html",
       inject: true,
-      chunks: ["index"],
+      chunks: ["index","formScript"],
       filename: "form.html",
     }),
   ],

@@ -110,6 +110,10 @@ main {
         }
     }
 
+    &__list--visible {
+        display: flex;
+    }
+
     &__item {
         @media (max-width: $phoneSize) {
             margin: 10px 0;
@@ -291,3 +295,4 @@ main {
         justify-self: center;
     }
 }
+

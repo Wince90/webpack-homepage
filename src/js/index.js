@@ -17,11 +17,13 @@ function welcome(name, lastName) {
 
 console.log(welcome());
 
+//nav button 
+
 const navButton = document.querySelector(".navigation__button--js");
 
 navButton.addEventListener('click', (e) => {
     const navigationList = document.querySelector('.navigation__list--js') ;
-    console.log(navigationList);
+    console.log("ok");
     navigationList.classList.toggle('navigation__list--visible');
 });
 

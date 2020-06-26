@@ -23,24 +23,24 @@
 	</header>
 	<main class="main" id="top">
 		<section class="storageSaver">
-			<div class="storageSaver__container">
+			<div class="storageSaver__mainContainer">
 				<header class="storageSaver__description">
-					<h2>lolol</h2>
+					<h2>Storage Saver</h2>
+					<div class="sto">
+						<p class="storageSaver__leftText">Save and delete text from localstorage</p>
+					</div>
 				</header>
 				<form class="storageSaver__form">
 					<fieldset class="storageSaver__fieldset">
 						<p>
-							<input type="fieldset" name="size" id="size_1">
-							<label for="size_1">Small</label>
+							<label for="inputArea">Small</label>
+							<textarea class="storageSaver__textarea" type="textarea" name="size"
+								id="inputArea"></textarea>
 						</p>
-						<p>
-							<input type="text" name="size" id="size_2">
-							<label for="size_2">Medium</label>
-						</p>
-						<p>
-							<input type="text" name="size" id="size_3">
-							<label for="size_3">Large</label>
-						</p>
+						<div class="storageSaver__buttons">
+							<button class="storageSaver__delete">Delete</button>
+							<button class="storageSaver__save">Save</button>
+						</div>
 					</fieldset>
 				</form>
 			</div>

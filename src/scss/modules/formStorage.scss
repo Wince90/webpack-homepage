@@ -3,7 +3,7 @@
     height: 100vh; 
     align-items: center;
     justify-content: center;
-    &__container {
+    &__mainContainer {
         display: flex;
         border: dotted 5px lightgray;
         border-radius: 10px;
@@ -13,6 +13,8 @@
         height: 300px;
         width: 200px;
         text-align: center;
+        display: flex;
+        flex-flow: column;
     }
     &__form {
         align-self: center;
@@ -21,9 +23,21 @@
     &__fieldset {
         border: none;
     }
+    &__textarea {
+        width: 300px;
+        display: block;
+        height: 150px;
+    }
+    &__buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-left: 100px;
+    }
+    &__leftText {
+      color: red;
+    }
 }
 
 .main--js {
     display: flex;
 }
-
